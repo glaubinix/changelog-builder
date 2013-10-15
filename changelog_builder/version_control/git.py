@@ -4,8 +4,8 @@ from changelog_builder.version_control.abstract_vcs import AbstractVcs
 
 class Git(object):
 
-    def get_log(self, path):
-        pr = subprocess.Popen("git log", cwd=path,
+    def get_log(self, path, branch):
+        pr = subprocess.Popen("git log --no-merges " + branch, cwd=path,
                               shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         (out, error) = pr.communicate()
 
