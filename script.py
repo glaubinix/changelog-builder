@@ -1,13 +1,11 @@
 #!/usr/bin/python
 
-import commands
-import subprocess
 import os
-import sys
+from changelog_builder import VersionControlFactory
 
-pr = subprocess.Popen("/usr/bin/git log", cwd=os.path.realpath(__file__),
-                      shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-(out, error) = pr.communicate()
+factory = VersionControlFactory()
+vcs = factory.get_vcs('git')
 
-print "Error : " + str(error)
-print "out : " + str(out)
+output = vcs.get_log(os.path.dirname(os.path.realpath(__file__)))
+
+print output
