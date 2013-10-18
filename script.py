@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import sys
+from changelog_builder.commit_processor.commit_ignore import CommitIgnore
 from config import config
 from changelog_builder import VersionControlFactory, Builder
 from changelog_builder.log_parser import LogParserFactory
@@ -24,4 +25,7 @@ output = vcs.get_log(config['path'], sys.argv[2])
 builder.set_current_log(output)
 
 diff = builder.get_diff()
+
+commit_ignore = CommitIgnore(config)
+diff = commit_ignore.process(diff)
 print diff
