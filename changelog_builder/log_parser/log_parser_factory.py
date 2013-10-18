@@ -1,4 +1,5 @@
 from changelog_builder.log_parser.git_log_parser import GitLogParser
+from changelog_builder.log_parser.svn_log_parser import SvnLogParser
 
 
 class LogParserFactory:
@@ -9,6 +10,4 @@ class LogParserFactory:
         if 'git' == identifier:
             return GitLogParser()
         elif 'svn' == identifier:
-            return Svn()
-
-
+            return SvnLogParser()
