@@ -1,0 +1,13 @@
+config = {
+    'vcs': 'git',  # git or svn
+    'path': 'http://path/to/my/repository',  # for svn add here the url to the repository, for git the local path to the repository
+    'ignore_comments': [
+        # a set of regex which should be ignore, for instance if you use <<<< merge >>>>
+    ],
+    'ticket_format': r"#[0-9]+",  # regex to match tickets, this is used to sort tickets and for the unique feature
+    'unique_tickets': True,  # if set to true only the last time a ticket appears will be used for the changelog
+    'categories': [
+        # it is possible to define a set of categories
+        # whenever the category appears in the commit message the commit will be added to the category
+    ]
+}
