@@ -10,8 +10,14 @@ vcs = vcs_factory.get_vcs('git')
 log_parser_factory = LogParserFactory()
 log_parser = log_parser_factory.get_parser('git')
 
-output = vcs.get_log(os.path.dirname(os.path.realpath(__file__)), 'master')
+output = vcs.get_log(os.path.dirname(os.path.realpath(__file__)), 'test')
 
 builder = Builder(log_parser)
 builder.set_previous_log(output)
-print output
+
+output = vcs.get_log(os.path.dirname(os.path.realpath(__file__)), 'master')
+
+builder.set_current_log(output)
+
+diff = builder.get_diff()
+print diff
