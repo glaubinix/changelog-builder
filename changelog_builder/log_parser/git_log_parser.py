@@ -5,7 +5,23 @@ import re
 class GitLogParser(object):
 
     def parse(self, log):
-        return self.parse_commit(log)
+        matches = re.split(r"\r?\n\s*\r?\n", log)
+
+        commits = {}
+
+        commit = ''
+        for match in matches:
+            partial = re.search(r"commit\s(.{40})", match)
+            if None != partial:
+                if commit != '':
+                    commits = dict(commits.items() + self.parse_commit(commit).items())
+                commit = match
+            else:
+                commit += "\n\n" + match
+
+        commits = dict(commits.items() + self.parse_commit(commit).items())
+
+        return commits
 
     def parse_commit(self, commit):
         match_object = re.search(r"commit\s(.{40})", commit)
@@ -16,7 +32,7 @@ class GitLogParser(object):
         if None == match_message[1]:
             raise Exception('no commit message found')
 
-        return {match_object.group(1): match_message[1]}
+        return {match_object.group(1): match_message[1].strip()}
 
 AbstractLogParser.register(GitLogParser)
 
