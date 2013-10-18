@@ -4,11 +4,27 @@ import re
 
 class SvnLogParser(object):
     def parse(self, log):
-        return self.parse_commit(log)
+        matches = re.split(r"------------------------------------------------------------------------", log)
+
+        commits = {}
+        for commit in matches:
+            if len(commit) > 10:
+                commits = dict(commits.items() + self.parse_commit(commit).items())
+
+        return commits
 
 
     def parse_commit(self, commit):
-        return {'1': 'test'}
+        lines = re.split(r"\r?\n", commit)
+        match_object = re.search(r"^r([0-9]+)", lines[1])
+        if None == match_object:
+            raise Exception('no commit found:' + commit)
+
+        message = ''
+        for x in range(3, len(lines)):
+            message += lines[x]
+
+        return {match_object.group(1): message}
 
 
 AbstractLogParser.register(SvnLogParser)
