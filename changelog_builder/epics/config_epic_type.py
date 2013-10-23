@@ -13,7 +13,7 @@ class ConfigEpicType(object):
             found = False
 
             for epic in config['epics']:
-                if epic in commits[key]:
+                if epic.lower() in commits[key].lower():
                     grouped_commits[epic].append(commits[key])
                     found = True
                     break
