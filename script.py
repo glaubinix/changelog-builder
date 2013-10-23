@@ -35,5 +35,7 @@ diff = unique_issues.process(diff)
 epic_type_factory = EpicTypeFactory()
 epic_type = epic_type_factory.get_epic_type(config['epic_type'])
 
-diff = epic_type.parse(config, diff)
-print diff
+grouped_diff = epic_type.parse(config, diff)
+
+printer = TermainalPrinter()
+printer.print_change_log(grouped_diff)
