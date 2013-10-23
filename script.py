@@ -1,10 +1,8 @@
 #!/usr/bin/python
 
 import sys
-from changelog_builder.commit_processor.commit_ignore import CommitIgnore
+from changelog_builder import *
 from config import config
-from changelog_builder import VersionControlFactory, Builder
-from changelog_builder.log_parser import LogParserFactory
 
 if len(sys.argv) < 2:
     raise Exception('Missing argument: Usage python script.py old_branch new_branch')
@@ -30,4 +28,7 @@ diff = builder.get_diff()
 
 commit_ignore = CommitIgnore(config)
 diff = commit_ignore.process(diff)
+
+unique_issues = UniqueIssues(config)
+diff = unique_issues.process(diff)
 print diff
