@@ -15,12 +15,14 @@ vcs = vcs_factory.get_vcs(config['vcs'])
 log_parser_factory = LogParserFactory()
 log_parser = log_parser_factory.get_parser(config['vcs'])
 
-output = vcs.get_log(config['path'], sys.argv[1])
+min_revision = vcs.get_min_revision(config['path'], sys.argv[1], sys.argv[2])
+
+output = vcs.get_log(config['path'], sys.argv[1], min_revision)
 
 builder = Builder(log_parser)
 builder.set_previous_log(output)
 
-output = vcs.get_log(config['path'], sys.argv[2])
+output = vcs.get_log(config['path'], sys.argv[2], min_revision)
 
 builder.set_current_log(output)
 
