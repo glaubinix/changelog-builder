@@ -31,4 +31,9 @@ diff = commit_ignore.process(diff)
 
 unique_issues = UniqueIssues(config)
 diff = unique_issues.process(diff)
+
+epic_type_factory = EpicTypeFactory()
+epic_type = epic_type_factory.get_epic_type(config['epic_type'])
+
+diff = epic_type.parse(config, diff)
 print diff

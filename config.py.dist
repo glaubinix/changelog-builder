@@ -6,7 +6,8 @@ config = {
     ],
     'issue_format': '#[0-9]+',  # regex to match tickets, this is used to sort tickets and for the unique feature
     'unique_issues': True,  # if set to true only the last time a ticket appears will be used for the changelog
-    'categories': [
+    'epic_type': 'config', # if you choose config then you have to add a list of epics in the config file
+    'epics': [
         # it is possible to define a set of categories
         # whenever the category appears in the commit message the commit will be added to the category
     ]
