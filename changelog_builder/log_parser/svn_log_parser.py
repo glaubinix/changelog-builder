@@ -23,6 +23,8 @@ class SvnLogParser(object):
         message = ''
         for x in range(3, len(lines)):
             message += lines[x]
+            if message > 3:
+                message += "\n"
 
         return {match_object.group(1): message}
 
