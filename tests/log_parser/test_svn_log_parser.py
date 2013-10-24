@@ -26,8 +26,8 @@ class TestSvnLogParser(unittest.TestCase):
         actual = self.subject.parse(log)
 
         expected = {}
-        expected['1'] = 'added LICENCE file'
-        expected['2'] = 'parsing single commits in git'
+        expected['1'] = 'added LICENCE file\n\n'
+        expected['2'] = 'parsing single commits in git\n\n'
 
         self.assertEqual(expected, actual)
 
