@@ -1,2 +1,0 @@
-from tests.log_parser.test_git_log_parser import TestGitLogParser
-from tests.log_parser.test_svn_log_parser import TestSvnLogParser

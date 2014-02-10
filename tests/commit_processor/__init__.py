@@ -1,1 +1,0 @@
-from tests.commit_processor.test_commit_ignore import TestCommitIgnore

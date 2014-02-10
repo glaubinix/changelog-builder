@@ -25,7 +25,7 @@ var count = 0;
 
 function diff() {
 	var logDiff = builder.getDiff();
-	logDiff = commitIgnore.process(logDiff);
+	logDiff = commitIgnore.process(config, logDiff);
 	logDiff = commitLength.process(logDiff);
 	logDiff = uniqueIssues.process(logDiff);
 	logDiff = epic.parse(logDiff);
