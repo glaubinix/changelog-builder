@@ -1,0 +1,16 @@
+{
+	"vcs": {
+		"type": "git",
+		"path": "https://github.com/glaubinix/conference-schedule.git"
+	},
+	"ignore_comments": [
+		"Merge pull request"
+	],
+	"commit_length": "single",
+	"issue_format": "#[0-9]+",
+	"unique_issues": true,
+	"epic_type": "null",
+	"epics": [
+
+	]
+}
