@@ -1,0 +1,22 @@
+{
+  "name": "changelog-builder",
+  "version": "0.0.0",
+  "description": "[![Build Status](https://secure.travis-ci.org/glaubinix/changelog-builder.png?branch=master)](http://travis-ci.org/glaubinix/changelog-builder)",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/glaubinix/changelog-builder.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/glaubinix/changelog-builder/issues"
+  },
+  "homepage": "https://github.com/glaubinix/changelog-builder"
+}
