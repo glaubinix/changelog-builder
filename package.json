@@ -1,7 +1,7 @@
 {
   "name": "changelog-builder",
-  "version": "0.1.0",
-  "description": "",
+  "version": "0.1.1",
+  "description": "Compare git/svn branches and build a changelog from the log diff",
   "main": "index.js",
   "scripts": {
 	  "test": "node_modules/tape/bin/tape test/*/*.js"
@@ -11,6 +11,15 @@
     "url": "git://github.com/glaubinix/changelog-builder.git"
   },
   "license": "MIT",
+  "author" : {
+    "name" : "Stephan Vock",
+    "email" : "stephan.vock@gmail.com"
+  },
+  "keywords": [
+    "git",
+    "svn",
+    "changelog"
+  ],
   "devDependencies": {
     "precommit-hook": "*",
     "tape": "~2.3.2"
