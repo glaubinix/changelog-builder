@@ -2,6 +2,5 @@
 
 ## Changelog Builder
 
-Add here some information what the thing actually does
-
-Works with python 2.7 only
+### Usage
+node index.js oldBranch newBreanch

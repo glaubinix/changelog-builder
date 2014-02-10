@@ -1,3 +1,10 @@
+#ide
 .idea
 atlassian-ide-plugin.xml
+
+#npm
+node_modules/
+npm-debug.log
+
+#project
 config.json
