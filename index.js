@@ -1,7 +1,7 @@
 var config = require('./config'),
 	Vcs = require('./lib/vcs/' + config.vcs.type),
 	Builder = require('./lib/builder'),
-	Epic = require('./lib/epics/' + config.epic_type + 'epic'),
+	Epic = require('./lib/epics/' + config.epics.type + 'epic'),
 	Printer = require('./lib/printer/terminalprinter'),
 	CommitIgnore = require('./lib/processor/commitignore'),
 	UniqueIssues = require('./lib/processor/uniqueissues'),
@@ -28,9 +28,9 @@ function diff() {
 	logDiff = commitIgnore.process(config, logDiff);
 	logDiff = commitLength.process(logDiff);
 	logDiff = uniqueIssues.process(logDiff);
-	logDiff = epic.parse(logDiff);
-
-	printer.printChangeLog(logDiff);
+	epic.parse(logDiff, function (groupedCommits) {
+		printer.printChangeLog(groupedCommits);
+	});
 }
 
 vcs.getMinVersion(oldBranch, newBranch, function (minRevision) {
