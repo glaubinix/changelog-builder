@@ -9,8 +9,7 @@
 	"commit_length": "single",
 	"issue_format": "#[0-9]+",
 	"unique_issues": true,
-	"epic_type": "null",
-	"epics": [
-
-	]
+	"epics": {
+		"type": "null"
+	}
 }
