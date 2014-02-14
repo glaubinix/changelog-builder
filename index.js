@@ -34,7 +34,6 @@ function diff() {
 }
 
 vcs.getMinVersion(oldBranch, newBranch, function (minRevision) {
-	minRevision = 15000;
 	vcs.getLog(oldBranch, minRevision, function (log) {
 		builder.setOldLog(log);
 		if (0 === count) count++;
