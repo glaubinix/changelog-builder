@@ -27,7 +27,7 @@ function diff() {
 	var logDiff = builder.getDiff();
 	logDiff = commitIgnore.process(config, logDiff);
 	logDiff = commitLength.process(logDiff);
-	logDiff = uniqueIssues.process(logDiff);
+	logDiff = uniqueIssues.process(config, logDiff);
 	epic.parse(logDiff, function (groupedCommits) {
 		printer.printChangeLog(groupedCommits);
 	});
