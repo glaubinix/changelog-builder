@@ -1,6 +1,6 @@
 {
   "name": "changelog-builder",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Compare git/svn branches and build a changelog from the log diff",
   "main": "index.js",
   "scripts": {

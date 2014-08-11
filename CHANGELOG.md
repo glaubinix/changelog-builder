@@ -1,3 +1,7 @@
+v 1.0.0
+ - Badges!
+ - Dependency updated
+
 v 0.2.0
   - Support for Jira Epics
   - Fixed revision diff to calc min Revision
@@ -9,4 +13,3 @@ v 0.1.1
 
 v 0.1.0
   - Port of the initial python Version to node
-
