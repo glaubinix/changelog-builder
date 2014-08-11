@@ -4,16 +4,16 @@
   "description": "Compare git/svn branches and build a changelog from the log diff",
   "main": "index.js",
   "scripts": {
-	  "test": "node_modules/tape/bin/tape test/*/*.js"
+    "test": "node_modules/tape/bin/tape test/*/*.js"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/glaubinix/changelog-builder.git"
   },
   "license": "MIT",
-  "author" : {
-    "name" : "Stephan Vock",
-    "email" : "stephan.vock@gmail.com"
+  "author": {
+    "name": "Stephan Vock",
+    "email": "stephan.vock@gmail.com"
   },
   "keywords": [
     "git",
@@ -21,10 +21,10 @@
     "changelog"
   ],
   "dependencies": {
-	  "jira": "git://github.com/Woellchen/node-jira#develop"
+    "jira": "git://github.com/Woellchen/node-jira#develop"
   },
   "devDependencies": {
     "precommit-hook": "*",
-    "tape": "~2.3.2"
+    "tape": "^2.14.0"
   }
 }
