@@ -1,8 +1,10 @@
-[![Build Status](https://secure.travis-ci.org/glaubinix/changelog-builder.png?branch=master)](http://travis-ci.org/glaubinix/changelog-builder)
-
 # Changelog Builder
 
 Builds a commit based changelog by comparing the svn/git log of two branches.
+
+[![Build Status](https://secure.travis-ci.org/glaubinix/changelog-builder.png?branch=master)](http://travis-ci.org/glaubinix/changelog-builder) [![Dependency Status](https://www.versioneye.com/user/projects/53d95f9a11489b8e30000024/badge.svg?style=flat)](https://www.versioneye.com/user/projects/53d95f9a11489b8e30000024)
+
+[![NPM](https://nodei.co/npm/changelog-builder.png?downloads=true&stars=true)](https://nodei.co/npm/changelog-builder/)
 
 ## Usage
 
