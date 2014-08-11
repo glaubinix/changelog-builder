@@ -21,7 +21,7 @@
     "changelog"
   ],
   "dependencies": {
-    "jira": "git://github.com/Woellchen/node-jira#develop"
+    "jira": "^0.10.0"
   },
   "devDependencies": {
     "precommit-hook": "*",
