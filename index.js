@@ -1,7 +1,7 @@
 var config = require('./config'),
 	Vcs = require('./lib/vcs/' + config.vcs.type),
 	Builder = require('./lib/builder'),
-	Epic = require('./lib/epics/' + config.epics.type + 'epic'),
+	Epic = require('./lib/epics/' + config.epics.type + 'Epic'),
 	Printer = require('./lib/printer/terminalprinter'),
 	CommitIgnore = require('./lib/processor/commitignore'),
 	UniqueIssues = require('./lib/processor/uniqueissues'),
