@@ -6,3 +6,9 @@ node_js:
   - 4.0
   - 4.1
   - iojs
+
+sudo: false
+
+branches:
+  only:
+    - master
