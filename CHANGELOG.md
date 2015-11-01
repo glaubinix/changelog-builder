@@ -1,3 +1,8 @@
+v 1.2.0
+- Travis improvements
+- Git diff speed improvements
+- Fixes to assure messages are unique
+
 v 1.1.0
 - Svn auth via config
 - Increased output buffer for huge diffs
